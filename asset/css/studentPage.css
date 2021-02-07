@@ -1,0 +1,8 @@
+#myProfile {
+  max-width: 800px;
+  margin: auto;
+}
+
+.list-group-item.active {
+  background-color: #002e60;
+}

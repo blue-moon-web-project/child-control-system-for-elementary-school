@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="./asset/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+    <link rel="stylesheet" href="./asset/css/grid-gallery.css">
+    <link rel="stylesheet" href="./asset/css/index.css">
+    <link rel="stylesheet" href="./asset/css/register.css">
+</head>
+<body>
+    <div id="body">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow fixed-top">
+            <a href="#" class="navbar-brand text-primary ">
+                <span id="logo">Hope</span>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="#" class="nav-item nav-link active">Home</a>
+                    <a href="#" class="nav-item nav-link">About us</a>
+                    <a href="#" class="nav-item nav-link">Contact us</a>
+                    <a href="#" class="nav-item nav-link">Events</a>
+
+                </div>
+                <div class="navbar-nav ml-auto">
+                    <a href="#" class="nav-item nav-link">Login</a>
+                    <a href="register.html" id="register-btn" class="nav-item nav-link btn btn-outline-info">Register</a>
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="main">
+
+            <div class="container">
+                <form method="POST" class="appointment-form" id="appointment-form">
+                    <h2 class="display-4">Student registration form</h2>
+                    <div class="form-group-1">
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name" required />
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name" required />
+                        <input type="date" name="dateOfBirth" id="dateOfBirth" placeholder="Date Of Birth" required />
+                        <input type="text" name="zone" id="zone" placeholder="Zone/sub city" required />
+                        <input type="text" name="woreda" id="woreda" placeholder="Woreda" required />
+                        <input type="text" name="kebele" id="kebele" placeholder="Kebele" required />
+                        <input type="text" name="houseNo" id="houseNo" placeholder="House Number" required />
+                        <input type="text" name="poBox" id="poBox" placeholder="P.O Box" required />
+                        <input type="text" name="town" id="town" placeholder="Town" required />
+                        <input type="text" name="nationality" id="nationality" placeholder="Nationality" required />
+                        <div class="select-list">
+                            <select name="grade" id="grade" placeholder="select your grade">
+                                <option value="" disabled selected hidden >Select Your Grade</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                        </div>
+                        <h3 class="display-4">Parent Information</h3>
+                        <input type="email" name="parentEmail" id="parentEmail" placeholder="Email" required />
+                        <input type="number" name="parentPhoneNo" id="parentPhoneNo" placeholder="Phone number" required />
+                        
+                    </div>
+                    <!-- <div class="form-group-2">
+                        <div class="select-list">
+                            <select name="confirm_type" id="confirm_type">
+                                <option seleected value="">By phone</option>
+                                <option value="by_email">By email</option>
+                            </select>
+                        </div>
+                        <div class="select-list">
+                            <select name="hour_appointment" id="hour_appointment">
+                                <option seleected value="">Hours : 8am 10pm</option>
+                                <option value="9h-11h">Hours : 9am 11pm</option>
+                            </select>
+                        </div>
+                    </div> -->
+                    <div class="form-submit">
+                        <input type="submit" name="submit" id="submit_new_student" class="submit" value="Register" />
+                    </div>
+                </form>
+            </div>
+    
+        </div>
+    
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+        <script>
+            baguetteBox.run('.grid-gallery', { animation: 'slideIn'});
+        </script>
+        <script src="./asset/js/jquery-3.5.1.js"></script>
+        <script src="./asset/js/popper.min.js"></script>
+        <script src="./asset/js/bootstrap.js"></script>
+        <script src="./asset/js/app.js"></script>
+        <script src="./asset/js/register.js"></script>
+    </div>
+</body>
+</html>
