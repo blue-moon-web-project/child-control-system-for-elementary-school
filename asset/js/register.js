@@ -176,13 +176,12 @@
         }
 
     
-        // close the database once the 
-        // transaction completes
 
     }
 
  })();
 
+//  end of plage
 
 
 
