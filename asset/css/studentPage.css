@@ -6,3 +6,13 @@
 .list-group-item.active {
   background-color: #002e60;
 }
+
+h4 {
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+#grades {
+  max-width: 800px;
+  margin: auto;
+}

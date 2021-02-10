@@ -49,7 +49,32 @@ console.log(id);
                     var student = event.target.result;
                     console.log(student.firstName + ' ' + student.lastName+"from the student page");
                     // displaying the student result goes here
-                    
+                    var welcomeNameH4 = document.getElementById("welcomeNameH4");
+                    welcomeNameH4.innerHTML = "Wellcome "+student.firstName + " " + student.lastName
+
+                    var id = document.getElementById("id");
+                    id.innerHTML = student.id
+
+                    var firstName = document.getElementById("firstName");
+                    firstName.value = student.firstName;
+
+                    var lastName = document.getElementById("lastName");
+                    lastName.value = student.lastName;
+
+                    var dateOfBirth = document.getElementById("dateOfBirth");
+                    dateOfBirth.value = student.dateOfBirth;
+
+                    var zone = document.getElementById("zone");
+                    zone.value = student.zone;
+
+                    var woreda = document.getElementById("woreda");
+                    woreda.value = student.woreda;
+
+                    var kebele = document.getElementById("kebele");
+                    kebele.value = student.kebele;
+
+                    var poBox = document.getElementById("poBox");
+                    poBox.value = student.poBox;
                 }
             };
         

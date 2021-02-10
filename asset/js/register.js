@@ -1,11 +1,11 @@
 (function () {
     // all the code will be here  
-    const request = indexedDB.open('SchoolDatabase', 1);
+    const request = indexedDB.open('SchoolDatabase', 2);
 
     request.onerror = (event) => {
         console.error(`Database error: ${event.target.errorCode}`);
     };
-    
+     
     // create the Contacts object store and indexes
     request.onupgradeneeded = (event) => {
         let db = event.target.result;
@@ -17,6 +17,9 @@
             autoIncrement: true
         });
 
+        let gradeStore = db.createObjectStore('Grades', {
+            keyPath: "id",
+        });
 
     };
 
@@ -69,6 +72,12 @@
             var section = "1";
             var password = Math.floor(1000 + Math.random() * 9000).toString();
             console.log(firstName)
+
+
+            // inserting id and empity grades to grades table
+
+
+
             insertStudent(db, {
                 firstName: firstName,
                 lastName: lastName,
@@ -86,12 +95,38 @@
                 section: section,
                 password: password
             });
-    
-            insertStudent(db, {
-                firstName: 'Jane',
-                lastName: 'Doe'
-            });
+
+            // window.location.open("index.html");
+
+
         });
+
+        // creating grades table
+            // creating grades table
+            // creating grades table
+            var grade = {
+                id: 49, 
+                grades: [
+                    {teacherId: "5", subject: "English", grade: "A"},
+                    {teacherId: "6", subject: "Amharic", grade: "A"},
+                    {teacherId: "7", subject: "Biology", grade: "A"},
+                    {teacherId: "8", subject: "Physics", grade: "A"},
+                    {teacherId: "9", subject: "Chemistry", grade: "A"},
+                    {teacherId: "10", subject: "Mathematics", grade: "A"},
+                    {teacherId: "11", subject: "It", grade: "A"},
+                    {teacherId: "12", subject: "Geography", grade: "A"},
+                    {teacherId: "13", subject: "History", grade: "A"}
+                ]
+            }
+    
+            insertGrade(db, grade);
+    
+            // creating grades table
+            // creating grades table
+            // creating grades table
+
+
+
     };
 
     function insertStudent(db, student) {
@@ -105,7 +140,7 @@
     
         // handle success case
         query.onsuccess = function (event) {
-            console.log(event);
+            console.log(student);
         };
     
         // handle the error case
@@ -117,9 +152,33 @@
         // close the database once the 
         // transaction completes
 
-        txn.oncomplete = function () {
-            db.close();
+    }
+
+
+    function insertGrade(db, grade) {
+        console.log("insert grade function gebtual")
+        // create a new transaction
+        const txn = db.transaction('Grades', 'readwrite');
+    
+        // get the Contacts object store
+        const store = txn.objectStore('Grades');
+        //
+        let query = store.put(grade);
+    
+        // handle success case
+        query.onsuccess = function (event) {
+            console.log(grade);
         };
+    
+        // handle the error case
+        query.onerror = function (event) {
+            console.log(event.target.errorCode);
+        }
+
+    
+        // close the database once the 
+        // transaction completes
+
     }
 
  })();
