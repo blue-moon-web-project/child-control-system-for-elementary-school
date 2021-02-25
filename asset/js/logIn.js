@@ -87,7 +87,7 @@
 
 (function () {
     // all the code will be here  
-    const request = indexedDB.open('SchoolDatabase', 1);
+    const request = indexedDB.open('SchoolDatabase', 2);
 
     request.onerror = (event) => {
         console.error(`Database error: ${event.target.errorCode}`);

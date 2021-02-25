@@ -101,7 +101,7 @@ body form {
   position: relative;
 }
 
-.container {
+.main .container {
   width: 586px;
   background: #fff;
   margin-left: 165px;
