@@ -38,7 +38,7 @@
         </nav>
 
         <center><h4 class="display-4 text-primary" id="welcomeNameH4">Wellcome Biruk Kassaw</h4></center>
-        <center><img src="./asset/images/Black-Male-Student.jpg" width="250px" alt="" class="mb-5"></center>
+        <center><i class="fas fa-user-graduate"></i></center>
 
         <div id="myProfile">
             <ul class="list-group">
@@ -85,7 +85,7 @@
 
           
             </ul>
-            <center><button class="btn btn-primary m-3">Save Changes</button></center>
+            <center><button id="studentSaveChanges" class="btn btn-primary m-3">Save Changes</button></center>
         </div>              
         <div id="grades" class="mb-5">
           <center><h3 class="text-primary display-4 border-top">Grades</h3></center>
@@ -201,6 +201,10 @@
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
       <script>
         AOS.init();
+      </script>
+      <script src="https://unpkg.com/localbase/dist/localbase.dev.js"></script>
+      <script>
+        let db = new Localbase('db')
       </script>
       <script src="./asset/js/insertData.js"></script>
       <script src="./asset/js/studentPage.js"></script>
