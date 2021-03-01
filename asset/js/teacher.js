@@ -58,7 +58,7 @@ db.collection('teachers').doc({ id: id }).get().then(teacher => {
         var saveChanges = document.getElementById("saveChanges");
 
         saveChanges.addEventListener("click", function (e) {
-            
+            // saving from the input items goes here
         })
 
       })
